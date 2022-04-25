@@ -13,6 +13,9 @@
 4) Test the websites features
 5) Present
 
+## Bugs
+1) When someone signs in, and then clicks the back button the login-page does not fully reload. This will mess up the login system for 1-2 login attempts, but will fix itself. Figure out a solution to this.
+
 ## Summary 
 n/a
 
