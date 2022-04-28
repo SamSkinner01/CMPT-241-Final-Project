@@ -26,7 +26,7 @@
 
         //If the user does exist mark this as true
         if ($user[0] == $returning_user && $user[1] == $password) {
-            $signed_in_user = array("true", "true"); //Save signed in user info
+            $signed_in_user = array("$returning_user", "true"); //Save signed in user info
             $signed_in_user = implode(",", $signed_in_user);
             file_put_contents("files/signedin.txt", PHP_EOL . $signed_in_user, FILE_APPEND);
             break;
@@ -38,7 +38,7 @@
 
 
         $is_signed_in = explode(",", $signed_in[1]); //The files first line will be empty so second line should be true true. When go to login page it will force it to be empty 
-        if ($is_signed_in[0] == "true" && $is_signed_in[1] == "true") {
+        if ($is_signed_in[1] == "true") {
 
         }
         else{
