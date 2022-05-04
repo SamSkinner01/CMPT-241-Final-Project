@@ -38,6 +38,30 @@
     
     ?>
     <!-- Main Content -->
+    <?php
+    	$stories = file ('stories.txt');
+	?>
+	<h1> Welcome, <?=  $returning_user ?> </h1>
+	<?php
+		for ($i = 0; $i < count($stories); $i++) {
+			$story = explode(",", $stories[$i]);
+    ?>
+	
+	<hr/>
+	<a href="stories.txt"><?=$story[0]?></a>
+	<p> by: <?= $story[1] ?>,<?= $story[2] ?> </p>
+	<hr/>
+	
+	<?php
+		 }
+	?>
+	  <form action="login.php" method="post">
+         <input type = "submit" value="Log Out">
+      </form>
+	  
+	  <form action="signup.php" method="post">
+          <input type = "submit" value="New Account">
+      </form>
 </body>
 
 </html>
