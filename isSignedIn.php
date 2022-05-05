@@ -5,7 +5,7 @@
 
     $is_signed_in = explode(",", $signed_in[1]); //The files first line will be empty so second line should be true true. When go to login page it will force it to be empty 
     if ($is_signed_in[1] == "true") {
-
+        return;
     }
     else{
         //If not true, reroute to login page

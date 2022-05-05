@@ -39,7 +39,7 @@
     ?>
     <!-- Main Content -->
     <?php
-    	$stories = file ('stories.txt');
+    	$stories = file("files/stories.txt");
     ?>
 	
     <h1> Welcome, <?=  $returning_user ?> </h1>
