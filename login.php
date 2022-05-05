@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
 <?php 
-    
-    shell_exec("cat > files/signedin.txt"); // Will execute shell command to empty signedin.txt
-
+ shell_exec("cat > files/signedin.txt"); // Will execute shell command to empty signedin.txt
 ?>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +22,7 @@
 
         <div class="login-form">
             <!-- Login Form -->
-            <form action="homepage.php" method="post">
+            <form action="loginsubmit.php" method="post">
                 <p class="login-text">Username</p>
                 <input class="login-input" type="text" size="25" name="username"pattern="[A-Za-z0-9]+" required>
                 <br>
