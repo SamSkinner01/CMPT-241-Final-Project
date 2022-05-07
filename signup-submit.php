@@ -9,6 +9,7 @@
 <body>
 
     <?php
+    
         //When the user signs up, write to the file
         $username = $_POST['username'];
         $password = $_POST['password'];
