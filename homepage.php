@@ -34,7 +34,7 @@
         <hr />
 
         <a href="story.php?story=<?php print $i ?>"><?= $story[0] ?></a>
-        <p> by: <?= $story[1] ?>,<?= $story[2] ?> </p>
+        <p> by: <?= $story[2] ?>&emsp;</p>
 
         <hr />
 

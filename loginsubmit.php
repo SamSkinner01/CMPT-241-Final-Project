@@ -9,7 +9,7 @@ $users = file("files/users.txt");
 
 // For all users
 for ($i = 0; $i < count($users); $i++) {
-    $user = explode(",", $users[$i]);
+    $user = explode("|", $users[$i]);
 
     // redirect to homepage if username and password are the same
     if ($user[0] == $username && $user[1] == $password) {

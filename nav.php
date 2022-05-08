@@ -16,12 +16,13 @@ if ('' == file_get_contents("files/signedin.txt")) {
 
     //Collect username
     $signed_in = file("files/signedin.txt");
-    $signed_in = explode(",", $signed_in[1]);
+    $signed_in = explode("|", $signed_in[1]);
 
 ?>
 
     <div class="nav">
         <a href="homepage.php">homepage</a>
+        <a href="create_story.php">create post</a>
         <a href="">about</a>
         <a href="">contact</a>
         <a href="login.php">logout</a>
