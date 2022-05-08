@@ -19,9 +19,19 @@
 		<h1><center>Submit an article</center></h1>
 		
 		<div id="poststory">
-			
+			<?php
+					$user_data= file("CMPT-241/files/users.txt"); //Get file
+					for($i = 0; $i < count($user_data); $i++){
+						$user = explode("|", $user_data[$i]);
+						$fname = $user[0];
+				}
+			?>	
 			<form action="post_story.php" method="post" id="postform">
-				<input type="hidden" name="date" value="<?php echo date("M d Y H:i A");?>">
+				<input type="hidden" name="user" value="<?php echo $fname;?>">
+				<input type="hidden" name="date" value="<?php echo date("M d Y");?>">
+				<label for="title">Title:</label><br>
+				<input type="text" name="title" form="postform"><br>
+				Story:<br> 
 				<textarea cols="70" rows="10" name="story" form="postform"></textarea>
 				<input type="submit">
 			</form>
