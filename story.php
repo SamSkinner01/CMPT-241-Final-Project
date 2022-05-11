@@ -11,24 +11,31 @@
 					$author = $user[2];
 					$date = $user[3];
 				}
-		?>	
+		?>
 
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="story.css">
 		<title><?=$title?></title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/story.css">
 	</head>
-	
+
 	<body>
 		<?php include('nav.php')?>
-		
-		<h1><center><?=$title?></center></h1>
-		
+
+		<div class="story-info">
+
+
+		<h1 class="title"><?=$title?></h1>
+
 		<h2>Author: <?=$author?></h2>
-		
+
 		<h3>Date Posted: <?=$date?></h3>
-		
+
+</div>
 		<div class="story">
 			<p>
 				<?php
@@ -36,8 +43,9 @@
 				?>
 			</p>
 		</div>
-		
-			Leave a comment:
+
+<div class="showcomments">
+			<p>Leave a comment:</p>
 			<div id="postcomments">
 				<?php
 				 //Get file
@@ -49,16 +57,20 @@
 						$user = explode("|", $user_data[$i]);
 						$fname = $user[0];
 					}
-				?>	
+				?>
 			<form action="post_comment.php?id=<?php print $id?>" method="post" id="postform">
 				<input type="hidden" name="user" value="<?php echo $fname;?>">
 				<input type="hidden" name="date" value="<?php echo date("M d Y");?>">
-				<textarea cols="40" rows="8" name="comment" form="postform"></textarea>
+				<textarea cols="70" rows="8" name="comment" form="postform"></textarea>
 				<input type="submit">
+
 			</form>
 			</div>
-			Comments
-			<div class="showcomments">
+			<p class ="comment-word">
+				Comments
+			</p>
+			<br />
+
 
 				<?php
 					$file = fopen("stories/comments$id.txt","r");   //printing all comments for current story
@@ -68,7 +80,7 @@
 						  }
 					fclose($file);
 				?>
-				
+
 			</div>
 
 	</body>

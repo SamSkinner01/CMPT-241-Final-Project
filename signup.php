@@ -6,15 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/signup.css">
+
+    <!-- Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
 
     <!-- Signup -->
-    <!-- Using same CSS as login page-->
     <div class="login">
+      <div class="top">
         <h1>Create an Account!</h1>
         <p>Please enter the information below.</p>
+      </div>
         <div class="login-form">
             <!-- Login Form -->
             <form action="signup-submit.php" method="post">

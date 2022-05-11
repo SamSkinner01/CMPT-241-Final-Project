@@ -1,0 +1,39 @@
+body, html{
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.login{
+  margin-left: auto;
+  margin-right: auto;
+  width: 750px;
+  text-align: center;
+}
+
+.login-form{
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: lightgray;
+  border-radius: 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.login-form p{
+  font-size: 13pt;
+}
+
+.login-input{
+      border-radius: 6px;
+      width: 275px;
+}
+
+.login-submit{
+  margin-top: 10px;
+  height: 27px;
+  width: 150px;
+  margin-left: 70px;
+  border-radius: 6px;
+}

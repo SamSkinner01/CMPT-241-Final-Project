@@ -1,0 +1,29 @@
+.homepage-stories{
+  margin-left: auto;
+  margin-right: auto;
+  width:750px;
+  text-align: center;
+}
+
+.content{
+  width: 800px;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  text-align: left;
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.storyname{
+  font-size: 15pt;
+}
+
+.content a{
+  color: black;
+}
+
+.content a:hover{
+  color: lightgray;
+}
