@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php 
+<?php
  shell_exec("cat > files/signedin.txt"); // Will execute shell command to empty signedin.txt
 ?>
 
@@ -10,15 +10,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <!-- CSS // Uses same stylesheet as signup -->
+    <link rel="stylesheet" href="css/signup.css">
+
+    <!-- Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    
+
 
     <!-- Login -->
     <div class="login">
-        <h1>Sign in!</h1>
+        <h1>Reddit 2.0</h1>
 
         <div class="login-form">
             <!-- Login Form -->

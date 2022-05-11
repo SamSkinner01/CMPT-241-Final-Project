@@ -1,0 +1,30 @@
+body, html{
+  margin:0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.nav{
+  font-size: 20pt;
+}
+
+.nav a{
+  text-decoration: none;
+  color: black;
+  padding: 15px 10px;
+}
+
+.nav a:hover{
+  background: lightgray;
+}
+
+.homepage-text{
+  font-size:30pt;
+}
+
+.login-text{
+  font-size: 10pt;
+}
+
+.nav p{
+  display: inline;
+}

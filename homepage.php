@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Homepage</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/homepage.css">
 </head>
 
 <body>
@@ -15,13 +18,14 @@
 
     include("nav.php");
     $directory = getcwd()."/";
-    $story_count = 0;  
+    $story_count = 0;
     $story_count = glob( $directory ."/stories/story*.txt" );
     if( $story_count) {
         $story_count = count($story_count);
         $story_count++;
     }
     ?>
+
     <?php
 
 
@@ -30,17 +34,17 @@
         $stories = file_get_contents("stories/story$i.txt");
         $story = explode("|", $stories);
     ?>
+<div class="homepage-stories">
+          <div class="content">
+            <a href="story.php?story=<?php print $i ?>"><span class="storyname"><?= $story[0] ?></span></a>
+            <p> by: <?= $story[2] ?>&emsp;</p>
+            </div>
 
-        <hr />
-
-        <a href="story.php?story=<?php print $i ?>"><?= $story[0] ?></a>
-        <p> by: <?= $story[2] ?>&emsp;</p>
-
-        <hr />
 
     <?php
     }
     ?>
+
 </body>
 
 </html>

@@ -1,3 +1,14 @@
+<head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/nav.css">
+
+  <!-- Fonts Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
 <?php
 // If user is not logged in
 if ('' == file_get_contents("files/signedin.txt")) {
@@ -5,10 +16,10 @@ if ('' == file_get_contents("files/signedin.txt")) {
 ?>
 
     <div class="nav">
-        <a href="homepage.php">homepage</a>
-        <a href="">about</a>
-        <a href="">contact</a>
-        <a href="login.php">login</a>
+        <a href="homepage.php"><span class ="homepage-text">Reddit 2.0</span></a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="login.php">Login</a>
     </div>
 
 <?php
@@ -21,13 +32,13 @@ if ('' == file_get_contents("files/signedin.txt")) {
 ?>
 
     <div class="nav">
-        <a href="homepage.php">homepage</a>
-        <a href="create_story.php">create post</a>
-        <a href="">about</a>
-        <a href="">contact</a>
-        <a href="login.php">logout</a>
+        <a href="homepage.php"><span class ="homepage-text">Reddit 2.0</span></a>
+        <a href="create_story.php">Create Story</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="login.php">Logout</a>
 
-        <p>Currently logged in as <?php print $signed_in[0]; ?></p>
+        <p><span class="login-text">Currently logged in as <?php print $signed_in[0]; ?></span></p>
     </div>
 
 <?php } ?>
