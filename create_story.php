@@ -21,7 +21,7 @@
 
 		<div class="poststory">
 			<?php
-					$user_data= file("files/users.txt"); //Get file
+					$user_data= file("files/signedin.txt"); //Get file
 					for($i = 0; $i < count($user_data); $i++){
 						$user = explode("|", $user_data[$i]);
 						$fname = $user[0];
@@ -31,9 +31,9 @@
 				<input type="hidden" name="user" value="<?php echo $fname;?>">
 				<input type="hidden" name="date" value="<?php echo date("M d Y");?>">
 				<span class="form-text">Title</span><br>
-				<input type="text" name="title" form="postform"><br>
+				<input type="text" name="title" form="postform" required><br>
 				<span class="form-text">Story</span><br>
-				<textarea cols="70" rows="10" name="story" form="postform"></textarea>
+				<textarea cols="70" rows="10" name="story" form="postform" required></textarea>
 				<input type="submit">
 			</form>
 		</div>

@@ -3,14 +3,30 @@
 	<head>
 		<?php
 			$id = $_GET["story"];
-			$story_data = file("stories/story$id.txt"); //Get file
-				for($i = 0; $i < count($story_data); $i++){
-					$user = explode("|", $story_data[$i]);
-					$title = $user[0];
-					$story = $user[1];
-					$author = $user[2];
-					$date = $user[3];
+
+			$story_data = file_get_contents("stories/story$id.txt"); //Get file
+			$output = "";
+			$user = array();
+				for($i = 0; $i <= strlen($story_data); $i++){
+					if($i == strlen($story_data)){
+						array_push($user, $output);
+						$output = "";
+						break;
+					}
+
+					if($story_data[$i] == "|"){
+						array_push($user, $output);
+						$output = "";
+						$i++;
+					}
+
+					$output .= $story_data[$i];
 				}
+
+				$title = $user[0];
+				$story = $user[1];
+				$author = $user[2];
+				$date = $user[3];
 		?>
 
 		<meta charset="UTF-8">
@@ -54,7 +70,7 @@
 					}
 					else{
 						$user_data= file("files/signedin.txt");
-						$user = explode("|", $user_data[$i]);
+						$user = explode("|", $user_data[1]);
 						$fname = $user[0];
 					}
 				?>

@@ -14,7 +14,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $to_write = array($username, $password);
-        $to_write=implode(",",$to_write);
+        $to_write=implode("|",$to_write);
         file_put_contents("files/users.txt", PHP_EOL.$to_write, FILE_APPEND);
     ?>
 

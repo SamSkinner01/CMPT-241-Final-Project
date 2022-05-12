@@ -19,8 +19,7 @@
 		}
 
 		$comment = $_POST["comment"];
-		$date = $_POST["date"];
-		$to_write = array($user, $comment, $date);
+		$to_write = array($user, $comment, "\n");
 		$to_write = implode("\n",$to_write);
 		file_put_contents("stories/comments$id.txt", PHP_EOL.$to_write, FILE_APPEND);
 		echo "Your comment has been posted";		

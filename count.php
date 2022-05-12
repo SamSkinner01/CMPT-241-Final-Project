@@ -19,5 +19,7 @@ $ex = ".txt";
 $myfile = fopen($fname1.$story_count.$ex, "w");
 $myfile = fopen($fname2.$story_count.$ex, "w");
 
+shell_exec("chmod 666 $fname2.$story_count.$ex");
+
 echo "<br>";
 ?>

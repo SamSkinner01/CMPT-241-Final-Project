@@ -11,14 +11,15 @@
 
 <?php
 // If user is not logged in
+
 if ('' == file_get_contents("files/signedin.txt")) {
     // file is empty, print one nav
 ?>
 
     <div class="nav">
         <a href="homepage.php"><span class ="homepage-text">Reddit 2.0</span></a>
-        <a href="">About</a>
-        <a href="">Contact</a>
+        <a href="about.php">About</a>
+        <a href="contact.php">Contact</a>
         <a href="login.php">Login</a>
     </div>
 
@@ -34,8 +35,8 @@ if ('' == file_get_contents("files/signedin.txt")) {
     <div class="nav">
         <a href="homepage.php"><span class ="homepage-text">Reddit 2.0</span></a>
         <a href="create_story.php">Create Story</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
+        <a href="about.php">About</a>
+        <a href="contact.php">Contact</a>
         <a href="login.php">Logout</a>
 
         <p><span class="login-text">Currently logged in as <?php print $signed_in[0]; ?></span></p>
